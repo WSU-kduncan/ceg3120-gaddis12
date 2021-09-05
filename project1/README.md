@@ -8,5 +8,5 @@
 > The repo won't clone inside my local
 ![clone-to-system]("5.jpg")
 > The repo will not clone inside of aws server as well
-![clone-to-system]("6.jpg")
+![clone-to-system]("project/6.jpg")
 > This is also proof that everything is being pushed over into github from my cloned repo.<
