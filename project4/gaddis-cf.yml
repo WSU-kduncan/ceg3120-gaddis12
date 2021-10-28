@@ -131,8 +131,8 @@ Resources:
             #!/bin/bash -xe
             apt-get update && \
             apt-get install -y \
-            apt-get install git && \
-            apt-get install python3 \
-            apt-get install pip3 \
-              replace-me && \
+            git \
+            python3 \
+            pip3 \
+            replace-me && \
             reboot
