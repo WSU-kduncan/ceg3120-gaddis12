@@ -86,6 +86,14 @@ Resources:
     Properties:
       Domain: vpc
       InstanceId: !Ref WebServ1Instance
+  Web2IPAddress:
+    Type: 'AWS::EC2::EIP'
+    DependsOn: AttachGateway
+    Properties:
+      Domain: vpc
+      InstanceId: !Ref WebServ2Instance
+
+
 
   # Create one more elastic IP for the last instance
   Lab1SecurityGroup:
