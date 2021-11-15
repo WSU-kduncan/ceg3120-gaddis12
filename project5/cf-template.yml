@@ -114,11 +114,11 @@ Resources:
         - IpProtocol: tcp
           FromPort: '80'
           ToPort: '80'
-          CidrIp: 0.0.0.0/0  # http access from any ip
+          CidrIp: 0.0.0.0/0
         - IpProtocol: tcp
           FromPort: '80'
           ToPort: '80'
-          CidrIp: 10.0.0.0/16  # http access from within vpc
+          CidrIp: 10.0.0.0/16
           # Need more rules for port 80
   # This defines one instance.  Make two more instances based on this (but no elastic IP)        
   PublicUbuntuInstance:
@@ -189,7 +189,7 @@ Resources:
             apt-get update && \
             apt-get install apache2 \
             apt-get install -y git && \
-            hostnamectl set-hostname webserv1 && \
+            hostnamectl set-hostname proxy  && \
             reboot
   WebServ2Instance:
     Type: 'AWS::EC2::Instance'
@@ -224,6 +224,5 @@ Resources:
             apt-get update && \
             apt-get install apache2 \
             apt-get install -y git && \
-            hostnamectl set-hostname webserv2 && \
+            hostnamectl set-hostname webserv2  && \
             reboot
-  
