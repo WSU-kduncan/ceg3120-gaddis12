@@ -86,7 +86,7 @@ Resources:
     Properties:
       Domain: vpc
       InstanceId: !Ref WebServ1Instance
-   Web2IPAddress:
+  Web2IPAddress:
     Type: 'AWS::EC2::EIP'
     DependsOn: AttachGateway
     Properties:
